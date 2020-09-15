@@ -1,0 +1,11 @@
+{
+    "yes": "EVET",
+    "no": "HAYIR",
+    "hello":"MERHABA DÜNYA",
+    "countValue": "SAYAÇ DEĞERİ ",
+    "noData": "VERİ BULUNAMADI ",
+    "deleteButton": "BUTTONU SİL ",
+    "confirmDialog": "EMİN MİSİNİZ? ",
+    "record_delete_success":"KAYIT BAŞARI İLE SİLİNDİ ",
+    "record_delete_error": "KAYIT SİLİNİRKEN HATA MEYDANA GELDİ "
+}

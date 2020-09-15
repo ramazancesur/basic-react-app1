@@ -1,0 +1,11 @@
+{
+    "yes":"YES",
+    "no":"NO",
+    "hello": "HELLO WORLD",
+    "countValue": "COUNT VALUE ",
+    "noData": "DATA NOT FOUND",
+    "deleteButton": "DELETE BUTTON VALUE",
+    "confirmDialog":"ARE YOU SURE ",
+    "record_delete_success": "RECORD IS DELETE",
+    "record_delete_error": "RECORD WAS NOT DELETED OCCURED BY ERROR "
+}
