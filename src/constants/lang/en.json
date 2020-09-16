@@ -7,5 +7,6 @@
     "deleteButton": "DELETE BUTTON VALUE",
     "confirmDialog":"ARE YOU SURE ",
     "record_delete_success": "RECORD IS DELETE",
+    "bitcoinTitle": "BITCOİN HISTORIC DATA'S ",
     "record_delete_error": "RECORD WAS NOT DELETED OCCURED BY ERROR "
 }

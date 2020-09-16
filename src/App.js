@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
+import HistoricalBitcoinPrice from './components/HistoricalBitcoinPrice'
 import ReduxToastr from 'react-redux-toastr';
-import { useDispatch } from 'react-redux';
 
 import 'fontsource-roboto';
 import CounterList from './containers/CounterList';
@@ -44,7 +44,7 @@ function App() {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-
+      <HistoricalBitcoinPrice/>
       <CounterList/>
      <ReduxToastr
       timeOut={4000}

@@ -2,10 +2,16 @@ import axios from 'axios';
 
 let options = {  headers:{'Content-Type': 'application/json; charset=utf-8'} };
 
+const serviceHost= "http://localhost:8445/myApp/"
 const instance = axios.create(options);
 
-export function getAxios(endpoint, data = undefined, hostUrl) {
 
+const getEndpointURL= (endpoint, hostUrl=serviceHost)=>{
+     return hostUrl+ endpoint;
+}
+
+export function getAxios(endpoint, data = undefined, hostUrl) {
+    endpoint= getEndpointURL(endpoint, hostUrl);
     const currentInstance = () => {
         return data === undefined ? instance.get(endpoint) : instance.get(endpoint, {
             params: JSON.stringify( data)
@@ -22,6 +28,7 @@ export function getAxios(endpoint, data = undefined, hostUrl) {
 }
 
 export function deleteAxios(endpoint, data, hostUrl) {
+    endpoint= getEndpointURL(endpoint, hostUrl);
     return instance.delete(endpoint)
         .then(response => {
             return response.data;
@@ -33,6 +40,7 @@ export function deleteAxios(endpoint, data, hostUrl) {
 }
 
 export function postAxios(endpoint, { data, errorMessage = 'Something bad happened', hostUrl }) {
+    endpoint= getEndpointURL(endpoint, hostUrl);
     return instance.post(endpoint, data)
         .then(response => {
             return response;
@@ -44,7 +52,8 @@ export function postAxios(endpoint, { data, errorMessage = 'Something bad happen
 }
 
 export function putAxios(endpoint, { data, errorMessage = 'Something bad happened' }, hostUrl) {
-      return instance.put(endpoint, data)
+    endpoint= getEndpointURL(endpoint, hostUrl);  
+    return instance.put(endpoint, data)
         .then(response => {
             return response;
         })
